@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+$font-family: 'Averia Serif Libre', cursive;
+$font-family: 'Poppins', sans-serif;
+
+@mixin mobile{
+    @media screen and (max-width:480px){
+        @content
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width:768px){
+        @content
+    }
+}
+
+@mixin laptop{
+    @media screen and (max-width:1200px){
+        @content
+    }
+}
+
+.formContainer {
+    background: rgb(20, 19, 36);
+    background: linear-gradient(176deg, rgba(20, 19, 36, 1) 0%, rgba(130, 148, 196, 1) 35%, #c0b9ff 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .formWrapper {
+        background-color: white;
+        padding: 12px 60px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        .logo_img {
+            width: 118px;
+            transition: ease-in-out 0.5s;
+        }
+
+        .logo {
+            color: #3d4d78;
+            font-weight: bold;
+            font-family: 'Averia Serif Libre';
+            font-size: 14px;
+        }
+
+        .title {
+            color: #3d4d78;
+            font-family: 'Averia Serif Libre';
+            font-weight: normal;
+            font-size: 20px;
+        }
+
+        form {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input {
+                padding: 15px;
+                border: none;
+                border-bottom: 1px solid #ACB1D6;
+                font-family: 'Poppins';
+
+                &::placeholder {
+                    font-family: 'Poppins';
+                    font-size: 12px;
+                    letter-spacing: 0.3px;
+                    color: #93959a;
+                }
+            }
+
+            button {
+                background-color: #3d4d78;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 10px;
+                border: none;
+                font-family: 'Poppins';
+                font-size: 16px;
+                transition: ease-in-out 0.4s;
+            }
+
+            button:hover {
+                background-color: #26365f;
+                translate: 0px -5px;
+            }
+
+            label {
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #ACB1D6;
+                font-size: 14px;
+                font-family: 'Poppins';
+                cursor: pointer;
+
+                img {
+                    width: 38px;
+                    transition: ease-in-out 0.4s;
+                }
+
+                img:hover {
+                    width: 44px;
+                }
+
+            }
+
+            .error_msg{
+                color: rgb(98, 23, 23);
+                align-self: center;
+                font-family: 'Poppins';
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+        }
+
+        p {
+            color: #293452;
+            font-family: 'Poppins';
+            font-size: 14px;
+            margin-top: 10px;
+
+            span {
+                cursor: pointer;
+                transition: ease-in-out 0.5s;
+            }
+
+            span:hover {
+                font-size: 18px;
+                color: #001f76;
+            }
+
+
+        }
+    }
+}
+
+.home {
+    background: rgb(20, 19, 36);
+    background: linear-gradient(176deg, #141324 0%, rgba(130, 148, 196, 1) 35%, #c0b9ff 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 85%;
+        height: 90%;
+        display: flex;
+        overflow: hidden;
+
+        @include tablet{
+            width: 90%;;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #4b4876;
+            position: relative;
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                background-color: #302d4a;
+                height: 50px;
+                padding: 10px 20px;
+                justify-content: space-between;
+                color:#ffe7e0;
+
+                .logo{
+                    font-family: 'Poppins';
+                    font-weight: bold;
+                    font-size: 16px;
+                    color:#acbff5;
+                    margin-right: 1em;
+
+                    @include tablet{
+                        display:none;
+                    }
+
+                }
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Poppins';
+                    font-size: 14px;
+
+                    img{@include tablet{
+                        display:none;
+                    }
+                        background-color: #ffe7e0;
+                        height: 36px;
+                        width: 36px;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin-right: 0.5em;
+                    }
+
+                    .bttn{
+                        margin-left: 30px;
+                        border: 1px solid rgb(0, 0, 0);
+                        border-radius: 2px;
+                        color: rgb(124, 63, 63);
+                        background: rgb(254, 157, 157);
+                        font-family: 'Poppins';
+                        font-size: 12px;
+                        cursor: pointer;
+
+                        transition: ease-in-out 0.4s;
+
+                        @include tablet{
+                            position: absolute;
+                            bottom: 10px;
+                            left: -6px;
+                        }                        
+                    }
+                    .bttn:hover{
+                        border: 1px solid rgb(255, 255, 255);
+                        color: rgb(223, 202, 202);
+                        background: rgb(139, 24, 24);
+                        transform: translate(0px, -2px);
+                    }
+                }
+            }
+
+            .search{
+                border-bottom: 1px solid gray;
+
+                .searchForm{
+                    padding: 10px;
+                    
+                    input{
+                        font-family: 'Poppins';
+                        font-size: 12px;
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                        outline: none;
+
+                        &::placeholder{
+                            color: lightgray;
+                        }
+                    }
+                }
+
+            }
+
+            .userChat{
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                color: white;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+
+                &:hover{
+                    background-color: #302d4a;
+                }
+                
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }        
+
+                .userChatInfo{
+                    
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: min-content;
+                    margin-left: 1em;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                    .userName{
+                        font-family: 'Poppins', sans-serif;
+                        padding-top: 10px;
+                        font-size:14px;
+                        font-weight:600;
+                    }
+
+                    .lastMsg{
+                        padding-top: 2px;
+                        font-family: 'Poppins';
+                        font-size: 11px;
+                        font-weight: light;
+                        color: lightgray;
+            
+                    }
+                }
+            }
+
+        }
+
+        .chat {
+            flex: 2;
+
+            .chatInfo{
+                height: 50px;
+                background-color: #4b4876;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 20px;
+
+                span{
+                    font-family: 'Poppins';
+                    font-size: 14px;
+                    color:white;
+                    cursor: pointer;
+                }
+            }
+
+            .chatIcons{
+                display: flex;
+
+                img{
+                    filter: opacity(50%);
+                    height: 16px;
+                    width: 16px;
+                    cursor: pointer;
+                    transition:  0.3s ease-in-out;
+
+                    &:hover{
+                        filter: opacity(100%);
+                    }
+                }
+            }
+            
+            .messages{
+                background-color: #c1c6ed;
+                padding: 10px;
+                height: calc(100% - 160px);
+                overflow: scroll;
+
+                .message{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .messageInfo{
+                        position:relative;
+                        display: flex;
+                        flex-direction: column;
+                        color: gray;
+                        font-weight: light;
+                        margin-bottom: 20px;
+
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .messageContent{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        max-width: 80%;
+                        padding-bottom: 20px;
+                        
+                        p{
+                           background-color: #e9ecff; 
+                           padding: 10px;
+                           border-radius: 0px 10px 10px 10px;
+                           font-family: 'Poppins';
+                           font-size: 14px;
+                           max-width: max-content;
+                        }
+
+                        img{
+                            width: 50%;
+                        }
+
+                        
+                    }
+                    &.owner{
+                        flex-direction: row-reverse;
+
+                        .messageContent{
+                            align-items: flex-end;
+
+                        img{
+                            width: 50%;
+                            border-radius: 10px;
+                        }
+                        }
+                        
+                        p{
+                            background-color: #534d88;
+                            border-radius: 10px 0px 10px 10px ;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .input{
+                height: 50px;
+                background-color: white;
+                padding: 10px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input{
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    color:#141324;
+                    font-family: 'Poppins';
+
+                    &::placeholder{
+                        color:lightgray;
+                    }
+                }
+
+                .send{
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+
+                    .Attach{
+                        height: 24x;
+                        width: 24px;
+                        cursor: pointer;
+                        padding-bottom: 3px;
+                    }
+
+                    .AddImg{
+                        height: 24x;
+                        width: 24px;
+                        cursor: pointer;
+                    }
+
+                    button{
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+
+                        .Send{
+                            width: 24px;
+                            height: 24px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
