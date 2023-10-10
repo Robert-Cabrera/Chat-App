@@ -14,6 +14,6 @@ Messenger app program crafted using React, CSS, and JavaScript, with Firebase in
 <hr>
 <h4 align="center">In the chat application, I have integrated real-time chat updates facilitated by Firebase's real-time database, <br>enabling users to extend their network by adding friends through usernames, <br> and further enhancing their communication by sharing images seamlessly in real-time</h4> <br>
 <div align="center">
-    <img width="700" height="auto" alt="cover_1" src="https://github.com/Robert-Cabrera/Chat-App/blob/master/src/images/3_">
+    <img width="700" height="auto" alt="cover_1" src="src/images/3_.png">
     <img width="700" height="auto" alt="cover_1" src="https://github.com/Robert-Cabrera/Chat-App/blob/master/src/images/4.png">
 </div>
